@@ -10,14 +10,14 @@ class SearchSelectDropdown<T> extends StatefulWidget {
   final double width; // To match the width of the input field
 
   const SearchSelectDropdown({
-    Key? key,
+    super.key,
     required this.items,
     this.selectedItem,
     required this.itemLabel,
     required this.onItemSelected,
     required this.searchController,
     required this.width,
-  }) : super(key: key);
+  });
 
   @override
   State<SearchSelectDropdown<T>> createState() =>
@@ -122,11 +122,11 @@ class _SearchSelectDropdownItem extends StatelessWidget {
   final VoidCallback onTap;
 
   const _SearchSelectDropdownItem({
-    Key? key,
+    super.key,
     required this.text,
     required this.isSelected,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

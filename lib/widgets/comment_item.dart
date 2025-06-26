@@ -11,14 +11,14 @@ class CommentItem extends StatelessWidget {
   final String currentUserName;
 
   const CommentItem({
-    Key? key,
+    super.key,
     required this.comment,
     this.indent = 0,
     this.isReply = false,
     required this.onReply,
     this.onUpvote,
     required this.currentUserName,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

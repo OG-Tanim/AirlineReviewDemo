@@ -9,12 +9,12 @@ class CommentSection extends StatefulWidget {
   final VoidCallback? onCommentAdded;
 
   const CommentSection({
-    Key? key,
+    super.key,
     required this.initialComments,
     required this.currentUserAvatar,
     required this.currentUserName,
     this.onCommentAdded,
-  }) : super(key: key);
+  });
 
   @override
   _CommentSectionState createState() => _CommentSectionState();

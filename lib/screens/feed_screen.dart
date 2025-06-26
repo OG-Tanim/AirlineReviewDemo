@@ -122,7 +122,7 @@ class FeedScreen extends StatelessWidget {
                             child: Container(
                               padding: const EdgeInsets.all(2),
                               decoration: BoxDecoration(
-                                color: Color(0xFF232323),
+                                color: const Color(0xFF232323),
                                 borderRadius: BorderRadius.circular(8.5),
                               ),
                               constraints: const BoxConstraints(
@@ -151,7 +151,7 @@ class FeedScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(
-                            color: Color(0xFF232323),
+                            color: const Color(0xFF232323),
                             width: 1.35,
                           ),
                           borderRadius: BorderRadius.circular(36),
@@ -166,7 +166,11 @@ class FeedScreen extends StatelessWidget {
                       const SizedBox(width: 24),
                       GestureDetector(
                         onTap: () => _scaffoldKey.currentState?.openEndDrawer(),
-                        child: Icon(Icons.menu, color: Colors.black, size: 32),
+                        child: const Icon(
+                          Icons.menu,
+                          color: Colors.black,
+                          size: 32,
+                        ),
                       ),
                     ],
                   ),

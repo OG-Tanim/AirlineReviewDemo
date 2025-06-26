@@ -12,7 +12,7 @@ import 'package:airlineapp/screens/feed_screen.dart';
 import 'package:airlineapp/models/comment_model.dart';
 
 class ShareExperienceScreen extends StatefulWidget {
-  const ShareExperienceScreen({Key? key}) : super(key: key);
+  const ShareExperienceScreen({super.key});
 
   @override
   State<ShareExperienceScreen> createState() => _ShareExperienceScreenState();
@@ -87,7 +87,7 @@ class _ShareExperienceScreenState extends State<ShareExperienceScreen> {
   }
 
   Future<void> _pickImages() async {
-    final List<XFile>? images = await _picker.pickMultiImage(
+    final List<XFile> images = await _picker.pickMultiImage(
       imageQuality: 80,
       maxWidth: 800,
     );
@@ -244,7 +244,7 @@ class _ShareExperienceScreenState extends State<ShareExperienceScreen> {
               DottedBorder(
                 color: Colors.grey.shade400,
                 strokeWidth: 2,
-                dashPattern: [6, 3],
+                dashPattern: const [6, 3],
                 borderType: BorderType.RRect,
                 radius: const Radius.circular(12),
                 child: Container(
@@ -331,9 +331,9 @@ class _ShareExperienceScreenState extends State<ShareExperienceScreen> {
                       onTap: _pickMonthYear,
                       decoration: _decoration(
                         hint: 'Travel Date',
-                        suffix: Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: const Icon(Icons.calendar_today),
+                        suffix: const Padding(
+                          padding: EdgeInsets.only(right: 8.0),
+                          child: Icon(Icons.calendar_today),
                         ),
                       ),
                     ),

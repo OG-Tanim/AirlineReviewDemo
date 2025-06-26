@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 
 class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   State<SignupScreen> createState() => _SignupScreenState();
@@ -299,14 +299,11 @@ class _SignupScreenState extends State<SignupScreen> {
           elevation: 2,
           backgroundColor: Colors.white,
         ),
-        searchFieldProps: TextFieldProps(
+        searchFieldProps: const TextFieldProps(
           decoration: InputDecoration(
             hintText: 'Country',
             border: InputBorder.none,
-            contentPadding: const EdgeInsets.symmetric(
-              horizontal: 10,
-              vertical: 12,
-            ),
+            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
           ),
         ),
         itemBuilder: (context, country, isSelected) => Padding(

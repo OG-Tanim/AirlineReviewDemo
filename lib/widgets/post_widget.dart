@@ -21,7 +21,7 @@ class PostWidget extends StatefulWidget {
   final List<Comment> initialComments;
 
   const PostWidget({
-    Key? key,
+    super.key,
     required this.avatarUrl,
     required this.userName,
     required this.timeAgo,
@@ -36,7 +36,7 @@ class PostWidget extends StatefulWidget {
     required this.likeCount,
     required this.commentCount,
     required this.initialComments,
-  }) : super(key: key);
+  });
 
   @override
   _PostWidgetState createState() => _PostWidgetState();
